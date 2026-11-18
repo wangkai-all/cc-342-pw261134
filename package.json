@@ -1,0 +1,28 @@
+{
+  "name": "local-report-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "虚构业务门户与真实浏览器采集台（仅本地演示账号）",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test --test-concurrency=1 \"test/*.test.js\"",
+    "test:portal": "node --test test/portal.test.js",
+    "test:collector": "node --test --test-concurrency=1 test/collector.e2e.test.js test/console-ui.test.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "keywords": [
+    "playwright",
+    "collector",
+    "local-demo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.3.0",
+    "playwright": "^1.65.1"
+  },
+  "author": ""
+}
